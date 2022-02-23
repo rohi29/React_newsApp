@@ -55,15 +55,15 @@ const News = (props) => {
     updateNews();
   }, []);
 
-  const handlePrevClick = async () => {
-    setPage(page - 1);
-    updateNews();
-  };
+  // const handlePrevClick = async () => {
+  //   setPage(page - 1);
+  //   updateNews();
+  // };
 
-  const handleNextClick = async () => {
-    setPage(page + 1);
-    updateNews();
-  };
+  // const handleNextClick = async () => {
+  //   setPage(page + 1);
+  //   updateNews();
+  // };
 
   const fetchMoreData = async () => {
     const url = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=${props.apiKey}&page=${page+1}&pageSize=${props.pageSize}`;
@@ -74,7 +74,7 @@ const News = (props) => {
     setTotalresults(parseData.totalResults);
   };
 
-  return (
+return (
     <>
       <h1 className="text-center" style={{ margin: "60px 0px" }}>
         NewsApp Top {capitalizeFirstletter(props.category)}{" "}
